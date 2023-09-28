@@ -1,12 +1,125 @@
+html, body {
+  font-size: 100%;
+}
+
 body {
   margin: 0;
   background-color: #180A25;
   color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 100px;
 }
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+body > header {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.gradient-text {
+  color: transparent !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(90deg,#9efff2 80%,#7676ff);
+}
+
+
+/* Navbar styles */
 
 .header-logo-img {
   width: 100px;
+  object-fit: contain;
 }
+
+nav {
+  background-image: linear-gradient(90deg,#7edaff,#2727f0,#ff78d6);
+  padding: 2px;
+  border-radius: 40px;
+}
+
+.mobile-nav-links-toggle-btn {
+  display: none;
+}
+
+.nav-bar {
+  background-color: #180A25;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  border-radius: 40px;
+  font-size: 1.125rem;
+}
+
+.nav-links-ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links-ul li {
+  display: inline-block;
+  margin-left: 25px;
+  font-weight: 500;
+}
+
+.nav-links-ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links-ul li a.get-started {
+  background-image: linear-gradient(90deg, purple, red);
+  padding: 10px;
+  border-radius: 30px;
+}
+
+
+@media screen and (max-width: 840px) {
+  body {
+    padding: 0 50px;
+  }
+  body > header {
+    display: block;
+    margin-top: 40px;
+  }
+  .nav-bar {
+    justify-content: space-between;
+    padding: 0;
+    position: relative;
+  }
+  nav {
+    background-image: none;
+    padding: 0;
+  }
+  .mobile-nav-links-toggle-btn {
+    display: block;
+    background-color: initial;
+    border: 0;
+  }
+  .mobile-nav-links-toggle-btn svg {
+    width: 25px;
+    height: 20px;
+  }
+  .nav-bar .nav-links-ul-menu-icon-container  .nav-links-ul {
+    display: none;
+  }
+  .nav-bar .nav-links-ul-menu-icon-container  .nav-links-ul .visible {
+    display: block;
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  body {
+    padding: 0 30px;
+  }
+}
+
+
 
 .customer-logos img, .technologies-icons img {
   width: 140px;
@@ -30,3 +143,4 @@ body {
 footer .footer-logo-container img {
   width: 150px;
 }
+
