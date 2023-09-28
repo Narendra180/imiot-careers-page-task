@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  background-color: #180A25;
+  color: white;
+}
+
+.header-logo-img {
+  width: 100px;
+}
+
+.customer-logos img {
+  width: 140px;
+  height: 80px;
+  object-fit: contain;
+}
