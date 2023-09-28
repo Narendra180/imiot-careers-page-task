@@ -8,8 +8,25 @@ body {
   width: 100px;
 }
 
-.customer-logos img {
+.customer-logos img, .technologies-icons img {
   width: 140px;
   height: 80px;
   object-fit: contain;
+}
+
+.photographs-container img {
+  width: 230px;
+  height: 160px;
+  border-radius: 20px;
+  display: inline-block;
+  background-color: wheat;
+}
+
+.team-member-info-container .picture-container img {
+  width: 80px;
+  height: 80px;
+}
+
+footer .footer-logo-container img {
+  width: 150px;
 }
