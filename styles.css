@@ -7,7 +7,6 @@ body {
   background-color: #180A25;
   color: white;
   font-family: 'Montserrat', sans-serif;
-  padding: 0 150px;
 }
 
 *,*::before,*::after {
@@ -22,10 +21,15 @@ a {
   text-decoration: none;
 }
 
+body > main {
+  padding: 0 150px;
+}
+
 body > header {
   display: flex;
   justify-content: center;
   margin-top: 60px;
+  padding: 0 150px;
 }
 
 main > section > h1,main > section header h1 {
@@ -36,7 +40,7 @@ main > section > h1,main > section header h1 {
   color: transparent !important;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(90deg,#9efff2 80%,#7676ff);
+  background-image: linear-gradient(90deg,#9efff2,#7676ff);
 }
 
 
@@ -548,6 +552,14 @@ nav {
   margin-bottom: 80px;
 }
 
+.open-roles-section header {
+  margin-bottom: 30px;
+}
+
+.open-roles-section header h1 {
+  margin-bottom: 20px;
+}
+
 .open-roles-section header h1 span {
   display: block;
 }
@@ -569,15 +581,134 @@ nav {
   background-image: linear-gradient(90deg, #6E01D8, #F10685 );
 }
 
+.open-roles-section header p {
+  font-size: 1.125rem;
+  font-weight: 600;
+  max-width: 650px;
+  line-height: 1.8;
+}
+
+.open-roles-section .category-section {
+  margin-bottom: 40px;
+}
+
+.open-roles-section .category-section h1 {
+  font-size: 1.25rem;
+  color: #D9D9D9;
+  margin-bottom: 10px;
+}
+
+.open-roles-section .category-section ul {
+  padding: 0;
+  list-style: none;
+}
+
+.open-roles-section .category-section ul li {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  border-top: 1px solid #cdcdcd;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.open-roles-section .category-section ul li div:nth-child(2) {
+  color: #B065FA;
+}
+
+.open-roles-section .category-section ul li:nth-child(1) {
+  border: 0;
+}
+
+/* footer styles */
+body > footer {
+  border-top: 2px solid #cdcdcd;
+}
+
+body > footer .footer-links-and-logo-container {
+  display: flex;
+  padding: 40px 0;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  padding-left: 40px;
+  padding-bottom: 30px;
+  width: 300px;
+}
+
+body > footer .footer-links-and-logo-container .footer-links-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-links-container section {
+  padding: 20px 50px;
+  width: 300px;
+}
+
+.footer-links-container section h1 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  background-image: linear-gradient(90deg,#8A1BF6B2,#EE76C5B2);
+}
+
+body > footer .footer-links-and-logo-container .footer-links-container ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links-container ul li {
+  margin-bottom: 15px;
+}
+
+.footer-links-container ul li a {
+  color: #FFFFFFB2;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.copyright-and-author-container {
+  display: flex;
+  border-top: 1px solid #cdcdcd;
+  padding: 20px 50px;
+  justify-content: space-between;
+  color: #FFFFFF80;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.copyright-text {
+  max-width: 50%;
+}
+
+.powered-by-text em {
+  color: #8A1BF6;
+  font-style: normal;
+  font-weight: 700;
+}
+
+footer .footer-logo-container img {
+  width: 180px;
+}
+
 
 /* media queries */
 @media screen and (max-width: 1110px) {
-  body {
+  body > main {
     padding: 0 70px;
   }
   body > header {
     display: block;
     margin-top: 40px;
+    padding: 0 70px;
   }
 
   /* navbar styles */
@@ -668,6 +799,14 @@ nav {
     margin-right: 50px;
 
   }
+
+  .open-roles-section .category-section ul li {
+    flex-direction: column;
+  }
+
+  .open-roles-section .category-section ul li div:nth-child(1) {
+    margin-bottom: 15px;
+  }
   
 }
 
@@ -675,6 +814,7 @@ nav {
   /* hero section styles  */
   .hero-section h1 {
     font-size: 1rem;
+    width: fit-content;
   }
   
   .hero-section p {
@@ -698,8 +838,13 @@ nav {
 }
 
 @media screen and (max-width: 430px) {
-  body {
+  body > main, body > header {
     padding: 0 30px;
+  }
+
+  .footer-logo-container, .footer-links-container section, .copyright-and-author-container {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .traits-list-container ul {
@@ -708,9 +853,4 @@ nav {
   }
 }
 
-
-
-footer .footer-logo-container img {
-  width: 150px;
-}
 
