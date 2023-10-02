@@ -299,6 +299,7 @@ nav {
 .technologies-being-used-section header h1 {
   font-size: 2.3rem;
   margin-bottom: 30px;
+  width: fit-content;
 }
 
 .technologies-being-used-section header span {
@@ -316,6 +317,20 @@ nav {
 
 .technologies-being-used-section header span.transparent-span {
   opacity: 50%;
+}
+
+.technologies-being-used-section header h1:hover span.transparent-span{
+  transition: all 0.3s linear;
+  opacity: 100%;
+}
+
+.technologies-being-used-section header h1:hover span .non-transparent-em {
+  transition: all 0.3s linear;
+  opacity: 50%;
+}
+
+.technologies-being-used-section header h1:hover span.by-span {
+  opacity: 100%;
 }
 
 .technologies-being-used-section header p {
@@ -369,12 +384,25 @@ nav {
 }
 
 .photographs-container {
-  overflow: auto;
+  overflow: hidden;
   display: flex;
   padding: 20px 0;
+  user-select: none;
 }
 
-/* width */
+.draggable-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.draggable-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 .photographs-container::-webkit-scrollbar {
   height: 10px;
 }
@@ -441,6 +469,10 @@ nav {
 .team-section header h1 span {
   display: block;
   margin-bottom: 0;
+}
+
+.team-section header h1 span.transparent-span {
+  opacity: 50%;
 }
 
 .high-ranking-members {
@@ -579,6 +611,28 @@ nav {
 .open-roles-section header h1 .gradient-text.intelligent-em {
   opacity: 1;
   background-image: linear-gradient(90deg, #6E01D8, #F10685 );
+}
+
+.open-roles-section header h1:hover .hover-transparent {
+  transition: all 0.3s linear;
+  opacity: 50%;
+}
+
+.open-roles-section header h1:hover span.hover-gradient-text {
+  transition: all 0.3s linear;
+  opacity: 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(90deg, #6E01D8, #F10685 );
+}
+
+.open-roles-section header h1:hover .hover-non-gradient-text {
+  transition: all 0.3s linear;
+  color: white !important;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  background: none;
 }
 
 .open-roles-section header p {

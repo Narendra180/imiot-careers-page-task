@@ -23,3 +23,30 @@ headerNavLinksUl.addEventListener('click', (e) => {
   if(e.currentTarget)
     e.currentTarget.classList.remove("visible");
 })
+
+
+
+const draggableOverlay = document.querySelector(".draggable-overlay");
+const photographsContainer = document.querySelector(".photographs-container");
+
+let offsetXOnMouseDown;
+let prevOffsetX;
+let mouseDown = false;
+
+draggableOverlay.addEventListener("mousemove", (e) => {
+  if(mouseDown) {
+    photographsContainer.scrollBy(prevOffsetX - e.offsetX,0)
+    prevOffsetX = e.offsetX;
+  }
+})
+draggableOverlay.addEventListener("mousedown", (e) => {
+  offsetXOnMouseDown = e.offsetX;
+  prevOffsetX = e.offsetX;
+  mouseDown = true;
+})
+draggableOverlay.addEventListener("mouseup", (e) => {
+  mouseDown = false;
+})
+draggableOverlay.addEventListener("mouseleave", (e) => {
+  mouseDown = false;
+})
