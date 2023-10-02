@@ -33,20 +33,20 @@ let offsetXOnMouseDown;
 let prevOffsetX;
 let mouseDown = false;
 
-draggableOverlay.addEventListener("mousemove", (e) => {
+draggableOverlay.addEventListener("pointermove", (e) => {
   if(mouseDown) {
     photographsContainer.scrollBy(prevOffsetX - e.offsetX,0)
     prevOffsetX = e.offsetX;
   }
 })
-draggableOverlay.addEventListener("mousedown", (e) => {
+draggableOverlay.addEventListener("pointerdown", (e) => {
   offsetXOnMouseDown = e.offsetX;
   prevOffsetX = e.offsetX;
   mouseDown = true;
 })
-draggableOverlay.addEventListener("mouseup", (e) => {
+draggableOverlay.addEventListener("pointerup", (e) => {
   mouseDown = false;
 })
-draggableOverlay.addEventListener("mouseleave", (e) => {
+draggableOverlay.addEventListener("pointerleave", (e) => {
   mouseDown = false;
 })

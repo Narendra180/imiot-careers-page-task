@@ -401,6 +401,7 @@ nav {
   height: 100%;
   top: 0;
   left: 0;
+  touch-action: none;
 }
 
 .photographs-container::-webkit-scrollbar {
