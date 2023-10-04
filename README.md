@@ -1,1 +1,1 @@
-Responsive Career made with HTML, CSS, JS without using any framework.
+Responsive Career page made with HTML, CSS, JS without using any framework.
